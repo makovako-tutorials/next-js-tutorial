@@ -1,3 +1,40 @@
+# Next js demo site
+
+Notes and code from following [this](https://www.youtube.com/watch?v=pY0vWYLDDco) tutorial
+
+## Notes
+
+- `npx create-next-app app-name`
+- static site generator
+- static sites with reusable templates
+- we need the template, and some data to fill it
+- for dynamic routing use `[slug]`, slug is some identifier for each unique post/item, and its a javascirpt file
+- slug is a variable inside of filename/pagepath
+- some functions for static site generation
+- get static paths, needs to be exported and async
+  - it returns and object with paths and some other stuff (fallback)
+  - here we need to tell what all of those different paths are
+  - like filenames from md files or some other genereated paths and names
+  - we need to write all of the code ourselves
+- get static props
+  - we are returning obejct
+  - with property props, this will be returen to our template object
+  - this function will receive what the static paths will return
+- npm run dev runs devleopment server
+- library for parsing markdown metadata - `gray-matter`
+- library for convertin md to html - `marked`
+- creating links
+  - have attribute of href and as
+  - href - `/blog/[slug]`
+  - as - `"/blog/"+slug`
+- deploying
+  - `npm run build`
+  - see different pages created
+  - to make it static `next export`
+  - it will be in out folder
+
+# Original Readme
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
